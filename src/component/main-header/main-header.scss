@@ -1,12 +1,12 @@
 .main-container {
-	background-image: url('../../image/main/background/MainBg.jpg');
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	color: #fff;
-	width: 1440px;
+	//width: 1440px;
 	height: 640px;
+	gap: 5%;
 	h1 {
 		font-weight: bold;
 		font-size: 40px;

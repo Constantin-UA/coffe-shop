@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+* {
+	font-family: 'Merienda', cursive;
+}
+/* .rows {
+	border: 1px solid red;
+}
+.colums {
+	border: 1px solid blue;
+} */
+.container {
+	position: relative;
+	width: 1440px;
+}
+.main-row {
+	background: url('../../image/main/background/MainBg.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+.mask-row {
+	background: url('../../image/main/background/best-bg.png') no-repeat center center fixed;
+	background-size: cover;
+}

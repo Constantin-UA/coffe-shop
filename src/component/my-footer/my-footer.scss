@@ -1,0 +1,33 @@
+.my-footer {
+	text-align: center;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
+	ul {
+		width: 355px;
+		height: 40px;
+		display: flex;
+		align-items: baseline;
+		list-style: none;
+		justify-content: center;
+		padding-left: 0;
+		gap: 4%;
+		li {
+			button {
+				background-color: rgba(0, 0, 0, 0);
+				border: none;
+				cursor: pointer;
+				color: #000;
+				font-size: 12px;
+				font-weight: 400;
+			}
+		}
+	}
+	.blackLogo {
+		width: 200px;
+		height: 30px;
+		margin: 10px auto 20px auto;
+	}
+}

@@ -1,11 +1,13 @@
 .about-container {
-	width: 1440px;
+	//width: 1440px;
 	height: 520px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 3%;
 	h2 {
+		margin-top: 20px;
 		font-size: 24px;
 		font-weight: 400;
 	}
@@ -15,7 +17,7 @@
 		height: 30px;
 	}
 	p {
-		width: 600px;
+		//width: 600px;
 		font-size: 14;
 		font-weight: 400;
 		text-align: center;
