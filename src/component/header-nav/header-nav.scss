@@ -1,0 +1,25 @@
+.headerNav {
+	position: fixed;
+	top: 30px;
+	left: 150px;
+	width: 355px;
+	height: 40px;
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: baseline;
+		list-style: none;
+		padding-left: 0;
+		li {
+			button {
+				background-color: rgba(0, 0, 0, 0);
+				border: none;
+				cursor: pointer;
+				color: #fff;
+				font-size: 12px;
+				font-weight: bold;
+			}
+		}
+	}
+}

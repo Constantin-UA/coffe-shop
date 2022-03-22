@@ -1,0 +1,30 @@
+.main-container {
+	background-image: url('../../image/main/background/MainBg.jpg');
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	width: 1440px;
+	height: 640px;
+	h1 {
+		font-weight: bold;
+		font-size: 40px;
+	}
+	p {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-weight: bold;
+		font-size: 24px;
+	}
+	button {
+		background-color: rgba(0, 0, 0, 0);
+		border: 1px solid #fff;
+		border-radius: 5px;
+		cursor: pointer;
+		color: #fff;
+		width: 120px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
