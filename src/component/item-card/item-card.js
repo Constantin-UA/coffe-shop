@@ -1,9 +1,9 @@
-import './my-card.scss';
+import './item-card.scss';
 
-const MyCard = (props) => {
+const ItemCard = (props) => {
 	return (
-		<div className="my-card">
-			<div className="card-wrapper">
+		<div className="item-card">
+			<div className="item-card-wrapper">
 				<img src={props.imgurl} alt="best" />
 				<span>Solimo Coffee Beans 2 kg</span>
 				<span className="price">10.73$</span>
@@ -12,4 +12,4 @@ const MyCard = (props) => {
 	);
 };
 
-export default MyCard;
+export default ItemCard;

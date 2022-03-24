@@ -1,17 +1,23 @@
+import HeaderNav from '../header-nav/header-nav';
+import SecondLogoBlack from '../../image/logos/second-logo-whait.svg';
 import './main-header.scss';
-import BeansLogoW from '../../image/main/Beans-logoW.svg';
 
-const MainHeader = () => {
-	return (
+const MainHeader = (props) => {
+	const htmlText = (
 		<>
-			<div className="main-container">
-				<h1>Everything You Love About Coffee</h1>
-				<img src={BeansLogoW} alt="main-logo" />
-				<p>We makes every day full of energy and taste</p>
-				<p>Want to try our beans?</p>
-				<button className="main-btn">More</button>
-			</div>
+			<img src={SecondLogoBlack} alt="main-logo" />
+			<p>We makes every day full of energy and taste</p>
+			<p>Want to try our beans?</p>
+			<button className="main-btn">More</button>
 		</>
+	);
+
+	return (
+		<div className="main-container header-main">
+			<HeaderNav />
+			<h1>{props.data.main}</h1>
+			{htmlText}
+		</div>
 	);
 };
 

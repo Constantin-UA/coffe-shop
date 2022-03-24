@@ -1,4 +1,4 @@
-.mask-group {
+.items-show {
 	height: 500px;
 	display: flex;
 	justify-content: space-evenly;
@@ -8,7 +8,7 @@
 		font-weight: 400;
 		text-align: center;
 	}
-	.wrapper {
+	&-wrapper {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;

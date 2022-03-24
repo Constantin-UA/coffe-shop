@@ -1,17 +1,22 @@
-.headerNav {
+.header-nav {
 	position: absolute;
 	top: 30px;
 	left: 150px;
-	width: 355px;
-	height: 40px;
-	ul {
+	.ul-nav {
+		position: relative;
 		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
 		align-items: baseline;
 		list-style: none;
+		width: 355px;
+		height: 40px;
 		padding-left: 0;
+		gap: 4%;
 		li {
+			img {
+				position: absolute;
+				top: -20px;
+				left: -30px;
+			}
 			button {
 				background-color: rgba(0, 0, 0, 0);
 				border: none;
@@ -19,6 +24,7 @@
 				color: #fff;
 				font-size: 12px;
 				font-weight: bold;
+				text-align: start;
 			}
 		}
 	}

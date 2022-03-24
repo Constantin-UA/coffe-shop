@@ -1,53 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
-@import 'bootstrap/dist/css/bootstrap.min.css';
+
 * {
 	font-family: 'Merienda', cursive;
 }
-.main-div {
-	position: relative;
-}
-/* .rows {
-	border: 1px solid red;
-}
-.colums {
-	border: 1px solid blue;
-} */
-.container {
+.app-container {
 	position: relative;
 	width: 1440px;
+	background-color: aquamarine;
 }
-.main-row {
-	height: 640px;
-}
-.main-bg {
-	background: url('../../image/main/background/MainBg.jpg') no-repeat center center;
+.main-header {
+	background: url('../../image/bgs/header-main.png') no-repeat center center;
 	background-size: cover;
 	position: absolute;
 	height: 640px;
 	width: 100%;
-}
-.about-row {
-	height: 520px;
-}
-
-.about-bg {
-	position: absolute;
-	height: 520px;
-	background-color: #fff;
-}
-.mask-row {
-	height: 500px;
-}
-.group-bg {
-	background: url('../../image/main/background/best-bg.png') no-repeat center center;
-	background-size: cover;
-	position: absolute;
-	top: 1160px;
-	width: 100vw;
-	height: 500px;
-}
-@media screen and (max-width: 1023px) {
-	.about-row {
-		font-size: 10px;
-	}
 }
