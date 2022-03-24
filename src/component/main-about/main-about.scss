@@ -1,24 +1,40 @@
-.main-about {
-	//width: 1440px;
+.about-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 630px;
+	gap: 10%;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	.girl {
+		width: 275px;
+		height: 355px;
+	}
+}
+.about-main {
+	margin-top: -80px;
+	margin-bottom: -80px;
+	width: 600px;
 	height: 520px;
+}
+.about-main,
+.about-our,
+.about-pleasure {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 3%;
 	h2 {
-		margin-top: 20px;
 		font-size: 24px;
 		font-weight: 400;
 	}
-	img {
-		margin: 20px 0 20px 0;
+	.logo {
 		width: 200px;
 		height: 30px;
 	}
 	p {
-		//width: 600px;
-		font-size: 14;
+		font-size: 14px;
 		font-weight: 400;
 		text-align: center;
 	}

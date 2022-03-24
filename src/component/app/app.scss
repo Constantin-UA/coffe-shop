@@ -5,8 +5,10 @@
 }
 .app-container {
 	position: relative;
-	width: 1440px;
 	background-color: aquamarine;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .main-header {
 	background: url('../../image/bgs/header-main.png') no-repeat center center;

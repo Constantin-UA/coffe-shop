@@ -11,12 +11,14 @@ const MainHeader = (props) => {
 			<button className="main-btn">More</button>
 		</>
 	);
-
+	const bgStyle = 'main-container ' + props.data.bgStyle;
+	const title = props.data.title;
+	const hasText = props.data.text;
 	return (
-		<div className="main-container header-main">
+		<div className={bgStyle}>
 			<HeaderNav />
-			<h1>{props.data.main}</h1>
-			{htmlText}
+			<h1>{title}</h1>
+			{hasText ? htmlText : ''}
 		</div>
 	);
 };
