@@ -8,27 +8,32 @@ import './app.scss';
 
 function App() {
 	return (
-		<Container className="container">
-			<Row className="rows main-row">
-				<Col className="colums">
-					<HeaderNav />
-					<MainHeader />
-				</Col>
-			</Row>
-			<Row className="rows">
-				<Col className="colums" md={{ span: 6, offset: 3 }}>
-					<AboutUs />
-				</Col>
-			</Row>
-			<Row className="rows mask-row">
-				<Col className="colums">
-					<MaskGroup />
-				</Col>
-			</Row>
-			<Row className="rows">
-				<MyFooter />
-			</Row>
-		</Container>
+		<div className="main-div">
+			<div className="main-bg"></div>
+			<div className="about-bg"></div>
+			<div className="group-bg"></div>
+			<Container className="container">
+				<Row className="rows main-row">
+					<Col className="colums">
+						<HeaderNav />
+						<MainHeader />
+					</Col>
+				</Row>
+				<Row className="rows about-row">
+					<Col className="colums" sm={{ span: 6, offset: 3 }}>
+						<AboutUs />
+					</Col>
+				</Row>
+				<Row className="rows mask-row">
+					<Col className="colums">
+						<MaskGroup />
+					</Col>
+				</Row>
+				<Row className="rows">
+					<MyFooter />
+				</Row>
+			</Container>
+		</div>
 	);
 }
 

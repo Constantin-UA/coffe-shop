@@ -3,6 +3,9 @@
 * {
 	font-family: 'Merienda', cursive;
 }
+.main-div {
+	position: relative;
+}
 /* .rows {
 	border: 1px solid red;
 }
@@ -14,10 +17,37 @@
 	width: 1440px;
 }
 .main-row {
-	background: url('../../image/main/background/MainBg.jpg') no-repeat center center fixed;
+	height: 640px;
+}
+.main-bg {
+	background: url('../../image/main/background/MainBg.jpg') no-repeat center center;
 	background-size: cover;
+	position: absolute;
+	height: 640px;
+	width: 100%;
+}
+.about-row {
+	height: 520px;
+}
+
+.about-bg {
+	position: absolute;
+	height: 520px;
+	background-color: #fff;
 }
 .mask-row {
-	background: url('../../image/main/background/best-bg.png') no-repeat center center fixed;
+	height: 500px;
+}
+.group-bg {
+	background: url('../../image/main/background/best-bg.png') no-repeat center center;
 	background-size: cover;
+	position: absolute;
+	top: 1160px;
+	width: 100vw;
+	height: 500px;
+}
+@media screen and (max-width: 1023px) {
+	.about-row {
+		font-size: 10px;
+	}
 }
