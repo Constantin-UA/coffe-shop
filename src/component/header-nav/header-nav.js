@@ -1,19 +1,25 @@
 import FirstLogoBlack from '../../image/logos/first-logo-whait.png';
 import './header-nav.scss';
 
-const HeaderNav = () => {
+const HeaderNav = (props) => {
 	return (
 		<div className="header-nav">
 			<ul className="ul-nav">
 				<li>
 					<img src={FirstLogoBlack} alt="coffe-logo" />
-					<button>Coffee house</button>
+					<button onClick={props.getAttrFromClick} aria-label="Home" data-click="main">
+						Coffee house
+					</button>
 				</li>
 				<li>
-					<button>Our coffee</button>
+					<button onClick={props.getAttrFromClick} aria-label="coffee" data-click="our">
+						Our coffee
+					</button>
 				</li>
 				<li>
-					<button>For your pleasure</button>
+					<button onClick={props.getAttrFromClick} aria-label="pleasure" data-click="pleasure">
+						For your pleasure
+					</button>
 				</li>
 			</ul>
 		</div>

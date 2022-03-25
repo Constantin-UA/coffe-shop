@@ -3,6 +3,9 @@ import SecondLogoBlack from '../../image/logos/second-logo-whait.svg';
 import './main-header.scss';
 
 const MainHeader = (props) => {
+	const getAttrFromClick = (e) => {
+		props.choiseClick(e.currentTarget.getAttribute('data-click'));
+	};
 	const htmlText = (
 		<>
 			<img src={SecondLogoBlack} alt="main-logo" />
@@ -16,7 +19,7 @@ const MainHeader = (props) => {
 	const hasText = props.data.text;
 	return (
 		<div className={bgStyle}>
-			<HeaderNav />
+			<HeaderNav getAttrFromClick={getAttrFromClick} />
 			<h1>{title}</h1>
 			{hasText ? htmlText : ''}
 		</div>
