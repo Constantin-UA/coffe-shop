@@ -1,13 +1,14 @@
 import './item-card.scss';
 
 const ItemCard = (props) => {
+	console.log(props);
+	const { name, country, price, image } = props.dataCard;
 	return (
 		<div className="item-card">
-			<div className="item-card-wrapper">
-				<img src={props.imgurl} alt="best" />
-				<span>Solimo Coffee Beans 2 kg</span>
-				<span className="price">10.73$</span>
-			</div>
+			<img src={image} alt="best" />
+			<span>{name}</span>
+			<span className="country">{country}</span>
+			<span className="price">{price}</span>
 		</div>
 	);
 };

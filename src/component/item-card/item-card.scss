@@ -1,24 +1,29 @@
 .item-card {
 	background-color: #fff;
 	border-radius: 10px;
-	padding: 10px;
-	&-wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		gap: 5px;
-		img {
-			width: 150px;
-			height: 130px;
-			//box-sizing: content-box;
-		}
-		span {
-			font-size: 14px;
-			.price {
-				font-weight: bold;
-				align-self: self-end;
-			}
-		}
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+	width: 195px;
+	height: 235px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 1%;
+	padding: 25px;
+	img {
+		width: 150px;
+		height: 130px;
+	}
+	span {
+		font-size: 14px;
+	}
+	.country {
+		font-weight: 400;
+		align-self: self-end;
+	}
+	.price {
+		font-weight: bold;
+		align-self: self-end;
 	}
 }
