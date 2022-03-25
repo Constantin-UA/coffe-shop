@@ -8,9 +8,9 @@ import './app.scss';
 function App() {
 	return (
 		<div className="app-container">
-			<MainHeader data={data.main} />
-			<MainAbout data={data.main} />
-			<ItemsShow data={data.our.dataCard} />
+			<MainHeader data={data.our} />
+			<MainAbout data={data.our} />
+			<ItemsShow data={data.our} />
 			<MainFooter />
 		</div>
 	);

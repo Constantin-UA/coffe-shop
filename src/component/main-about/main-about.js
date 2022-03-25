@@ -1,7 +1,6 @@
 import SecondLogoBlack from '../../image/logos/second-logo-black.svg';
 import GirlImage from '../../image/girl.png';
 import CupImage from '../../image/cup.png';
-import LineImage from '../../image/line.png';
 
 import './main-about.scss';
 
@@ -33,7 +32,6 @@ const MainAbout = ({ data }) => {
 					<p>{style === 'about-main' ? text.text3 : text.text2}</p>
 				</div>
 			</div>
-			{style === 'about-main' ? '' : <img className="line" src={LineImage} alt="img" />}
 		</>
 	);
 };

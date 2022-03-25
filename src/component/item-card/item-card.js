@@ -1,7 +1,6 @@
 import './item-card.scss';
 
 const ItemCard = (props) => {
-	console.log(props);
 	const { name, country, price, image } = props.dataCard;
 	return (
 		<div className="item-card">

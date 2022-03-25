@@ -1,8 +1,10 @@
 .items-show {
 	width: 800px;
 	display: flex;
-	justify-content: space-evenly;
 	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	row-gap: 40px;
 	h3 {
 		font-size: 24px;
 		font-weight: 400;
@@ -14,5 +16,10 @@
 		justify-content: space-between;
 		align-items: center;
 		row-gap: 40px;
+	}
+	.wrapper-for-search {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 1%;
 	}
 }
