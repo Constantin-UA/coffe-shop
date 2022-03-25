@@ -4,7 +4,7 @@ import SecondLogoBlack from '../../image/logos/second-logo-black.svg';
 import './main-footer.scss';
 
 const MainFooter = (props) => {
-	const getAttrFromClick = (e) => {
+	const onClick = (e) => {
 		props.choiseClick(e.currentTarget.getAttribute('data-click'));
 	};
 	return (
@@ -12,17 +12,17 @@ const MainFooter = (props) => {
 			<ul>
 				<li>
 					<img src={FirstLogoBlack} alt="first-logo" />
-					<button onClick={getAttrFromClick} aria-label="Home" data-click="main">
+					<button onClick={onClick} aria-label="Home" data-click="main">
 						Coffee house
 					</button>
 				</li>
 				<li>
-					<button onClick={getAttrFromClick} aria-label="coffee" data-click="our">
+					<button onClick={onClick} aria-label="coffee" data-click="our">
 						Our coffee
 					</button>
 				</li>
 				<li>
-					<button onClick={getAttrFromClick} aria-label="pleasure" data-click="pleasure">
+					<button onClick={onClick} aria-label="pleasure" data-click="pleasure">
 						For your pleasure
 					</button>
 				</li>
