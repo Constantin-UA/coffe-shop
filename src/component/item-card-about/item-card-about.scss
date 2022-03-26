@@ -1,0 +1,42 @@
+.item-card-about {
+	max-width: 850px;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	column-gap: 50px;
+	.aromistico {
+		width: 390px;
+		height: 355px;
+	}
+	.card-desc-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		.title {
+			font-size: 24px;
+			font-weight: 400;
+		}
+		.logo {
+			width: 200px;
+			height: 30px;
+		}
+		p {
+			font-size: 14px;
+			font-weight: 400;
+			text-align: start;
+			align-self: flex-start;
+			.card-desc {
+				font-weight: 700;
+				text-align: start;
+			}
+			.card-price {
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+	}
+}

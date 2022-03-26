@@ -5,11 +5,15 @@ import LineImage from '../../image/line.png';
 import './items-show.scss';
 
 const ItemsShow = (props) => {
+	const onClickItem = (country, price, image) => {
+		const itemData = [country, price, image];
+		props.onCardClick(itemData);
+	};
 	const { data } = props;
 	const { dataCard } = data;
 	const element = dataCard.map((item) => {
 		const { id, ...itemData } = item;
-		return <ItemCard key={id} dataCard={itemData} />;
+		return <ItemCard key={id} dataCard={itemData} onClickItem={onClickItem} />;
 	});
 
 	const choise = (chiser) => {
@@ -30,12 +34,6 @@ const ItemsShow = (props) => {
 				return <h3>Our Best</h3>;
 		}
 	};
-	/* 			{dataCard.length > 3 ? <img className="line" src={LineImage} alt="img" /> : <h3>Our Best</h3>}
-				<div className="wrapper-for-search">
-					<ItemsSearch />
-					<ItemsFilter />
-				</div> */
-
 	const filterElement = choise(data.bgStyle);
 	return (
 		<div className="items-show">
