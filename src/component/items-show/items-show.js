@@ -9,6 +9,7 @@ const ItemsShow = (props) => {
 		const itemData = [country, price, image];
 		props.onCardClick(itemData);
 	};
+	let bgClass = 'items-show items-show-bg';
 	const { data } = props;
 	const { dataCard } = data;
 	const element = dataCard.map((item) => {
@@ -19,6 +20,7 @@ const ItemsShow = (props) => {
 	const choise = (chiser) => {
 		switch (chiser) {
 			case 'header-our':
+				bgClass = 'items-show';
 				return (
 					<>
 						<img className="line" src={LineImage} alt="img" />
@@ -29,6 +31,7 @@ const ItemsShow = (props) => {
 					</>
 				);
 			case 'header-pleasure':
+				bgClass = 'items-show';
 				return <img className="line" src={LineImage} alt="img" />;
 			default:
 				return <h3>Our Best</h3>;
@@ -36,7 +39,7 @@ const ItemsShow = (props) => {
 	};
 	const filterElement = choise(data.bgStyle);
 	return (
-		<div className="items-show">
+		<div className={bgClass}>
 			{filterElement}
 			<div className="items-show-wrapper">{element}</div>
 		</div>

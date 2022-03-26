@@ -4,12 +4,12 @@ import './item-card-about.scss';
 
 const ItemCardAbout = (props) => {
 	const country = props.data[0],
-		price = props.data[1],
-		image = props.data[2];
+		price = props.data[1];
+	//const	image = props.data[2];
 
 	return (
 		<div className="item-card-about">
-			<img className="aromistico" src={image} alt="img" />
+			<img className="aromistico" src={Aromistico} alt="img" />
 			<div className="card-desc-wrapper">
 				<h2 className="title">About it</h2>
 				<img className="logo" src={SecondLogoBlack} alt="coffe-logo-black" />
