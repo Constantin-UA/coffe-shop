@@ -41,7 +41,6 @@ class App extends Component {
 	};
 
 	searchEmp = (items, term) => {
-		console.log(items);
 		if (term.length === 0) return items;
 		return items.filter((item) => {
 			return item.name.toLowerCase().indexOf(term) > -1;
