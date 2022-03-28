@@ -13,19 +13,28 @@ class App extends Component {
 		this.state = {
 			choiser: 'main',
 			itemData: [],
+			filter: 'all',
 		};
 	}
 
 	choiseClick = (attribut) => {
+		console.log('nav click');
 		this.setState(({ choiser }) => ({
 			choiser: attribut,
 			itemData: [],
+			filter: 'all',
 		}));
 	};
 
 	onCardClick = (itemData) => {
 		this.setState({ itemData });
 	};
+
+	onFilterSearch = (filter) => {
+		console.log(filter);
+		this.setState({ filter });
+	};
+
 	render() {
 		const dataToGo = data[this.state.choiser];
 		return (
@@ -39,7 +48,12 @@ class App extends Component {
 					<>
 						<MainHeader data={dataToGo} choiseClick={this.choiseClick} />
 						<MainAbout data={dataToGo} />
-						<ItemsShow data={dataToGo} onCardClick={this.onCardClick} />
+						<ItemsShow
+							data={dataToGo}
+							onCardClick={this.onCardClick}
+							filter={this.state.filter}
+							onFilterSearch={this.onFilterSearch}
+						/>
 					</>
 				)}
 
