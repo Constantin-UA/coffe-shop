@@ -40,6 +40,14 @@ class App extends Component {
 		this.setState({ term });
 	};
 
+	searchEmp = (items, term) => {
+		console.log(items);
+		if (term.length === 0) return items;
+		return items.filter((item) => {
+			return item.name.toLowerCase().indexOf(term) > -1;
+		});
+	};
+
 	render() {
 		const dataToGo = data[this.state.choiser];
 		return (
@@ -55,10 +63,9 @@ class App extends Component {
 						<MainAbout data={dataToGo} />
 						<ItemsShow
 							data={dataToGo}
-							cardArr={this.state.cardArr}
+							cardArr={this.searchEmp(this.state.cardArr, this.state.term)}
 							onCardClick={this.onCardClick}
 							filter={this.state.filter}
-							term={this.state.term}
 							onSearch={this.onSearch}
 							onFilterSearch={this.onFilterSearch}
 						/>
