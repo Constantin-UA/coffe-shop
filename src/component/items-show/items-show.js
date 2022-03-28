@@ -19,10 +19,19 @@ class ItemsShow extends Component {
 	};
 
 	createElement = (dataCard) => {
-		return dataCard.map((item) => {
-			const { id, ...itemData } = item;
-			return <ItemCard key={id} dataCard={itemData} onClickItem={this.onClickItem} />;
-		});
+		if (this.props.data.bgStyle === 'header-main') {
+			let newCardData = dataCard.map((item) => {
+				const { id, ...itemData } = item;
+				return <ItemCard key={id} dataCard={itemData} onClickItem={this.onClickItem} />;
+			});
+			newCardData.length = 3;
+			return newCardData;
+		} else {
+			return dataCard.map((item) => {
+				const { id, ...itemData } = item;
+				return <ItemCard key={id} dataCard={itemData} onClickItem={this.onClickItem} />;
+			});
+		}
 	};
 
 	choise = (choiser) => {
@@ -32,7 +41,7 @@ class ItemsShow extends Component {
 					<>
 						<img className="line" src={LineImage} alt="img" />
 						<div className="wrapper-for-search">
-							<ItemsSearch />
+							<ItemsSearch onSearch={this.onSearch} />
 							<ItemsFilter onFilterSearch={this.onFilterSearch} />
 						</div>
 					</>
@@ -53,9 +62,12 @@ class ItemsShow extends Component {
 			return this.createElement(dataCard);
 		} else {
 			const newData = dataCard.filter((item) => item.country.toLowerCase() === filt);
-
 			return this.createElement(newData);
 		}
+	};
+
+	onSearch = (e) => {
+		this.props.onSearch(e.currentTarget.value);
 	};
 
 	render() {
@@ -63,7 +75,7 @@ class ItemsShow extends Component {
 		const bgClass = 'items-show';
 		const { bgStyle } = this.props.data;
 		const filterElement = this.choise(bgStyle);
-		const element = this.startFilterData(this.props.data.dataCard, this.props.filter);
+		const element = this.startFilterData(this.props.cardArr, this.props.filter);
 		return (
 			<div className={bgStyle === 'header-main' ? bgClassMain : bgClass}>
 				{filterElement}

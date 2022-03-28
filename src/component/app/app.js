@@ -4,7 +4,7 @@ import MainAbout from '../main-about/main-about';
 import ItemsShow from '../items-show/items-show';
 import MainFooter from '../main-footer/main-footer';
 import ItemCardAbout from '../item-card-about/item-card-about';
-import { data } from '../../data';
+import { data, dataCard } from '../../data';
 import './app.scss';
 
 class App extends Component {
@@ -14,15 +14,17 @@ class App extends Component {
 			choiser: 'main',
 			itemData: [],
 			filter: 'all',
+			term: '',
+			cardArr: dataCard,
 		};
 	}
 
 	choiseClick = (attribut) => {
-		console.log('nav click');
 		this.setState(({ choiser }) => ({
 			choiser: attribut,
 			itemData: [],
 			filter: 'all',
+			term: '',
 		}));
 	};
 
@@ -31,8 +33,11 @@ class App extends Component {
 	};
 
 	onFilterSearch = (filter) => {
-		console.log(filter);
 		this.setState({ filter });
+	};
+
+	onSearch = (term) => {
+		this.setState({ term });
 	};
 
 	render() {
@@ -50,8 +55,11 @@ class App extends Component {
 						<MainAbout data={dataToGo} />
 						<ItemsShow
 							data={dataToGo}
+							cardArr={this.state.cardArr}
 							onCardClick={this.onCardClick}
 							filter={this.state.filter}
+							term={this.state.term}
+							onSearch={this.onSearch}
 							onFilterSearch={this.onFilterSearch}
 						/>
 					</>
