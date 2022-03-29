@@ -17,3 +17,41 @@
 	height: 640px;
 	width: 100%;
 }
+
+@media screen and (max-width: 765px) {
+	.header-nav {
+		position: inherit;
+	}
+	.main-container {
+		justify-content: space-evenly;
+		h1 {
+			font-size: 30px;
+		}
+		p {
+			font-size: 15px;
+		}
+	}
+	.about-wrapper {
+		flex-direction: column;
+	}
+	.wrapper-for-search {
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 425px) {
+	.header-nav {
+		.ul-nav {
+			flex-direction: column;
+		}
+	}
+	.main-footer {
+		ul {
+			flex-direction: column;
+			li {
+				img {
+					position: inherit;
+				}
+			}
+		}
+	}
+}

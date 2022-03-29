@@ -11,7 +11,7 @@
 		text-align: center;
 	}
 	&-wrapper {
-		width: 800px;
+		max-width: 800px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;

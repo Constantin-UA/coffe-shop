@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 630px;
+	max-width: 630px;
 	gap: 10%;
 	margin-top: 80px;
 	margin-bottom: 80px;
@@ -15,7 +15,7 @@
 .about-main {
 	margin-top: -80px;
 	margin-bottom: -80px;
-	width: 600px;
+	max-width: 600px;
 	height: 520px;
 }
 .about-main,
