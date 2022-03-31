@@ -7,26 +7,26 @@ const MainFooter = (props) => {
 	const onClick = (e) => {
 		props.choiseClick(e.currentTarget.getAttribute('data-click'));
 	};
+	const dataButton = [
+		{ dataAtr: 'main', aria: 'home', label: 'Coffe house' },
+		{ dataAtr: 'our', aria: 'coffee', label: 'Our coffee' },
+		{ dataAtr: 'pleasure', aria: 'pleasure', label: 'For your pleasure' },
+	];
+
+	const buttons = dataButton.map((item, idx) => {
+		return (
+			<li className="footer-li">
+				{idx === 0 ? <img src={FirstLogoBlack} alt="first-logo" /> : ''}
+				<button onClick={onClick} aria-label={item.aria} data-click={item.dataAtr}>
+					{item.label}
+				</button>
+			</li>
+		);
+	});
+
 	return (
 		<div className="main-footer">
-			<ul>
-				<li>
-					<img src={FirstLogoBlack} alt="first-logo" />
-					<button onClick={onClick} aria-label="Home" data-click="main">
-						Coffee house
-					</button>
-				</li>
-				<li>
-					<button onClick={onClick} aria-label="coffee" data-click="our">
-						Our coffee
-					</button>
-				</li>
-				<li>
-					<button onClick={onClick} aria-label="pleasure" data-click="pleasure">
-						For your pleasure
-					</button>
-				</li>
-			</ul>
+			<ul className="footer-ul">{buttons}</ul>
 			<img className="secondLogo" src={SecondLogoBlack} alt="coffe-logo-black" />
 		</div>
 	);

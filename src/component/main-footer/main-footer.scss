@@ -5,7 +5,7 @@
 	text-align: center;
 	height: 150px;
 	padding-top: 30px;
-	ul {
+	.footer-ul {
 		position: relative;
 		display: flex;
 		align-items: baseline;
@@ -14,12 +14,13 @@
 		max-width: 355px;
 		height: 40px;
 		padding-left: 0;
-		gap: 4%;
-		li {
+		.footer-li {
+			min-width: 110px;
+			position: relative;
 			img {
 				position: absolute;
-				top: -15px;
-				left: -1px;
+				top: -20px;
+				left: -15px;
 			}
 			button {
 				background-color: rgba(0, 0, 0, 0);

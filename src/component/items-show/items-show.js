@@ -13,9 +13,8 @@ class ItemsShow extends Component {
 		};
 	}
 
-	onClickItem = (country, price, image) => {
-		this.setState({ itemData: [country, price, image] });
-		this.props.onCardClick(this.state.itemData);
+	onClickItem = (itemData) => {
+		this.props.onCardClick(itemData);
 	};
 
 	createElement = (dataCard) => {

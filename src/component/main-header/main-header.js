@@ -11,7 +11,9 @@ const MainHeader = (props) => {
 			<img src={SecondLogoBlack} alt="main-logo" />
 			<p>We makes every day full of energy and taste</p>
 			<p>Want to try our beans?</p>
-			<button className="main-btn">More</button>
+			<button className="main-btn" data-click="our" onClick={getAttrFromClick}>
+				More
+			</button>
 		</>
 	);
 	const bgStyle = 'main-container ' + props.data.bgStyle;

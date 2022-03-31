@@ -1,18 +1,27 @@
+import { Component } from 'react';
 import './item-card.scss';
 
-const ItemCard = (props) => {
-	const { name, country, price, image } = props.dataCard;
-	const onClick = () => {
-		props.onClickItem(country, price, image);
+class ItemCard extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			itemData: [props.dataCard.country, props.dataCard.price, props.dataCard.image],
+		};
+	}
+	onClick = () => {
+		this.props.onClickItem(this.state.itemData);
 	};
-	return (
-		<div className="item-card" onClick={onClick}>
-			<img src={image} alt="best" />
-			<span>{name}</span>
-			<span className="country">{country}</span>
-			<span className="price">{price}</span>
-		</div>
-	);
-};
+	render() {
+		const { name, country, price, image } = this.props.dataCard;
+		return (
+			<div className="item-card" onClick={this.onClick}>
+				<img src={image} alt="best" />
+				<span>{name}</span>
+				<span className="country">{country}</span>
+				<span className="price">{price}</span>
+			</div>
+		);
+	}
+}
 
 export default ItemCard;
