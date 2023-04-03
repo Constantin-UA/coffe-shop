@@ -5,6 +5,7 @@ import ItemsShow from '../items-show/items-show';
 import MainFooter from '../main-footer/main-footer';
 import ItemCardAbout from '../item-card-about/item-card-about';
 import { data, dataCard } from '../../data';
+import 'animate.css';
 import './app.scss';
 
 class App extends Component {
@@ -52,12 +53,12 @@ class App extends Component {
 		return (
 			<div className="app-container">
 				{this.state.itemData.length > 0 ? (
-					<>
+					<div className="app-animate-box animate__animated animate__fadeIn">
 						<MainHeader data={data.our} choiseClick={this.choiseClick} />
 						<ItemCardAbout data={this.state.itemData} />
-					</>
+					</div>
 				) : (
-					<>
+					<div className="app-animate-box animate__animated animate__fadeIn">
 						<MainHeader data={dataToGo} choiseClick={this.choiseClick} />
 						<MainAbout data={dataToGo} />
 						<ItemsShow
@@ -68,7 +69,7 @@ class App extends Component {
 							onSearch={this.onSearch}
 							onFilterSearch={this.onFilterSearch}
 						/>
-					</>
+					</div>
 				)}
 
 				<MainFooter choiseClick={this.choiseClick} />

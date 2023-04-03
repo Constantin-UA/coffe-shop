@@ -1,8 +1,8 @@
 import nextId from 'react-id-generator';
 
-import Img1 from './image/items/item1.png';
-import Img2 from './image/items/item2.png';
-import Img3 from './image/items/item3.png';
+import Img1 from './image/items/item1.webp';
+import Img2 from './image/items/item2.webp';
+import Img3 from './image/items/item3.webp';
 export const data = {
 	main: {
 		title: 'Everything You Love About Coffee',

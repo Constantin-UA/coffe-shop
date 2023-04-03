@@ -1,7 +1,7 @@
 import ItemCard from '../item-card/item-card';
 import ItemsSearch from '../items-search/items-search';
 import ItemsFilter from '../items-filter/items-filter';
-import LineImage from '../../image/line.png';
+import LineImage from '../../image/line.webp';
 import './items-show.scss';
 import { Component } from 'react';
 

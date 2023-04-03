@@ -1,4 +1,4 @@
-import FirstLogoBlack from '../../image/logos/first-logo-whait.png';
+import FirstLogoBlack from '../../image/logos/first-logo-whait.webp';
 import './header-nav.scss';
 
 const HeaderNav = (props) => {

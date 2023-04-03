@@ -1,6 +1,6 @@
 import SecondLogoBlack from '../../image/logos/second-logo-black.svg';
-import GirlImage from '../../image/girl.png';
-import CupImage from '../../image/cup.png';
+import GirlImage from '../../image/girl.webp';
+import CupImage from '../../image/cup.webp';
 
 import './main-about.scss';
 

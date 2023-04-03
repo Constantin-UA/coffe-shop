@@ -1,5 +1,5 @@
 import SecondLogoBlack from '../../image/logos/second-logo-black.svg';
-import Aromistico from '../../image/aromistico.png';
+import Aromistico from '../../image/aromistico.webp';
 import './item-card-about.scss';
 
 const ItemCardAbout = (props) => {

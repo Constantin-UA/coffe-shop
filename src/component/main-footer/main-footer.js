@@ -1,4 +1,4 @@
-import FirstLogoBlack from '../../image/logos/first-logo-black.png';
+import FirstLogoBlack from '../../image/logos/first-logo-black.webp';
 import SecondLogoBlack from '../../image/logos/second-logo-black.svg';
 
 import './main-footer.scss';
@@ -15,7 +15,7 @@ const MainFooter = (props) => {
 
 	const buttons = dataButton.map((item, idx) => {
 		return (
-			<li className="footer-li">
+			<li className="footer-li" key={`${item.dataAtr}-${idx}`}>
 				{idx === 0 ? <img src={FirstLogoBlack} alt="first-logo" /> : ''}
 				<button onClick={onClick} aria-label={item.aria} data-click={item.dataAtr}>
 					{item.label}
